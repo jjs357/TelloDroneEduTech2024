@@ -1,15 +1,11 @@
 import re
-import argparse
 import os
 import json
-%pip install djitellopy
 from djitellopy import Tello
 import google.generativeai as palm
+import speech_recognition as sr
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--prompt", type=str, default="tello_basic.txt")
-args = parser.parse_args()
-
+# Cell 3: Load configuration and initialize Gemini Pro AI
 with open("config.json", "r") as f:
     config = json.load(f)
 
@@ -72,37 +68,57 @@ print(f"Initializing drone...")
 
 drone = Tello()
 drone.connect()
-drone.streamon()
+drone.get_battery()
+#drone.streamon()
 
 dict_of_corners = {'origin': [0, 0], 'front right corner': [1000, -1000], 'front left corner': [1000, 1000], 'back left corner': [-1000, 1000], 'back right corner': [-1000, -1000]}
 
 print(f"Done.")
 
-with open(args.prompt, "r") as f:
+# Cell 4: Load prompt from file
+prompt_file = "C:\nf\tello_basic.txt"
+with open(prompt_file, "r") as f:
     prompt = f.read()
 
 ask(prompt)
 
 print("Welcome to the Tello drone chatbot! I am ready to help you with your Tello questions and commands.")
 
+# Cell 5: Main loop for user input
+recognizer = sr.Recognizer()
+microphone = sr.Microphone()
+
 while True:
-    question = input(colors.YELLOW + "Tello Drone> " + colors.ENDC)
+    print(colors.YELLOW + "Tello Drone> " + colors.ENDC + "Listening for your command...")
 
-    if question == "!quit" or question == "!exit":
-        break
+    with microphone as source:
+        recognizer.adjust_for_ambient_noise(source)
+        audio = recognizer.listen(source)
 
-    if question == "!clear":
-        os.system("cls" if os.name == 'nt' else 'clear')
-        continue
+    try:
+        question = recognizer.recognize_google(audio)
+        print(colors.YELLOW + "You said: " + colors.ENDC + question)
 
-    response = ask(question)
+        if question.lower() in ["quit", "exit"]:
+            break
 
-    print(f"\n{response}\n")
+        if question.lower() == "clear":
+            os.system("cls" if os.name == 'nt' else 'clear')
+            continue
 
-    code = extract_python_code(response)
-    if code is not None:
-        print("Please wait while I run the code with the Tello drone...")
-        exec(code, globals(), {"drone": drone})
-        print("Done!\n")
+        response = ask(question)
+
+        print(f"\n{response}\n")
+
+        code = extract_python_code(response)
+        if code is not None:
+            print("Please wait while I run the code with the Tello drone...")
+            exec(code, globals(), {"drone": drone})
+            print("Done!\n")
+
+    except sr.UnknownValueError:
+        print(colors.RED + "Sorry, I did not understand that." + colors.ENDC)
+    except sr.RequestError as e:
+        print(colors.RED + f"Could not request results; {e}" + colors.ENDC)
 
 drone.end()
