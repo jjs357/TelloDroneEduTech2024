@@ -4,20 +4,18 @@ You can use simple Python functions from the math library.
 
 drone.takeoff() - takes off the drone.
 drone.land() - lands the drone.
-drone.fly_forward(distance, units) - fly forward a distance in units of either in or cm.
-drone.fly_backward(distance, units) - fly backward a distance in units of either in or cm.
-drone.fly_left(distance, units) - fly left a distance in units of either in or cm.
-drone.fly_right(distance, units) - fly right a distance in units of either in or cm.
-drone.fly_up(distance, units) - fly up a distance in units of either in or cm.
-drone.fly_down(distance, units) - fly down a distance in units of either in or cm.
+drone.move_forward(distance, units) - fly forward a distance in units of either in or cm.
+drone.move_backward(distance, units) - fly backward a distance in units of either in or cm.
+drone.move_left(distance, units) - fly left a distance in units of either in or cm.
+drone.move_right(distance, units) - fly right a distance in units of either in or cm.
+drone.move_up(distance, units) - fly up a distance in units of either in or cm.
+drone.move_down(distance, units) - fly down a distance in units of either in or cm.
 drone.fly_to_xyz(x, y, z, units) - fly to a x, y, z position in units of either in or cm. A positive x is forward and a positive y is left.
 drone.fly_curve(x1, y1, z1, x2, y2, z2, units) - fly a curve through two points where the starting location is the current position of the drone. Units can be in or cm.
 drone.flip_forward() - flips the drone forward.
 drone.flip_backward() - flips the drone backward.
 drone.flip_left() - flips the drone left.
 drone.flip_right() - flips the drone right.
-drone.yaw_left(angle) - rotate the drone left a specific angle in degrees.
-drone.yaw_right(angle) - rotate the drone right a specific angle in degrees.
 drone.set_speed(speed) - set the speed of the drone in centimeters per second.
 drone.get_temperature() - get the temperature of the environment in Celcius
 drone.get_battery() - get the current battery percentage 
