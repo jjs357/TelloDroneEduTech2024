@@ -5,7 +5,7 @@ from djitellopy import Tello
 import google.generativeai as palm
 import speech_recognition as sr
 
-# Cell 3: Load configuration and initialize Gemini Pro AI
+# Load configuration and initialize Gemini Pro AI. Ensure config.json is in the same directory as this file and contains the API Key
 with open("config.json", "r") as f:
     config = json.load(f)
 
@@ -75,7 +75,7 @@ dict_of_corners = {'origin': [0, 0], 'front right corner': [1000, -1000], 'front
 
 print(f"Done.")
 
-# Cell 4: Load prompt from file
+# Load prompt from file
 prompt_file = "C:\nf\tello_basic.txt"
 with open(prompt_file, "r") as f:
     prompt = f.read()
@@ -84,7 +84,7 @@ ask(prompt)
 
 print("Welcome to the Tello drone chatbot! I am ready to help you with your Tello questions and commands.")
 
-# Cell 5: Main loop for user input
+# Main loop for user input via voice
 recognizer = sr.Recognizer()
 microphone = sr.Microphone()
 
