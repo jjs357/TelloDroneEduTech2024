@@ -21,7 +21,7 @@ USE_DUMMY_TELLO = False
 USE_DEBUG_WITH_DUMMY = False
 EMERGENCY_HOLD_TIME = 1000
 
-api_key = ""
+api_key = "" #INSERT YOUR OWN API KEY HERE
 headers = {
   "Content-Type": "application/json",
   "Authorization": f"Bearer {api_key}"
