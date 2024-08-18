@@ -22,4 +22,4 @@ This program is an example student code and which uses the Tello drone and atake
 
 <h2>Notes:</h2>
 Feel free to use my code in your projects. Email me at (https://clarence.guru/contact.html) if you have any questions or need help.
-Currently working on multiple / simultanous object recognition using Gemini AI. Contact me if you would like a copy of the code.
+Currently working on multiple / simultanous object Image Recognition using Gemini AI. Contact me if you would like a copy of the code.
