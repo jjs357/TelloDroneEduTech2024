@@ -21,5 +21,5 @@ File(s): samplestudentcode_image_recognition.py <br><br>
 This program is an example student code and which uses the Tello drone and atakes a picture of objects. The name oif the object is passed to the AI, which then recognises the object. The description of the object is displayed on the screen. 
 
 <h2>Notes:</h2>
-Feel free to use my code in your projects. Email me at (https://clarence.guru/contact.html) if you have any questions or need help.
+Feel free to use my code in your projects. Email me at (https://clarence.guru) if you have any questions or need help.
 Currently working on multiple / simultanous object Image Recognition using Gemini AI. Contact me if you would like a copy of the code.
