@@ -1,4 +1,4 @@
-<h1># TelloDroneEduTech2024</h1>
+<h1># TelloDroneEduTech2024 / DigiCon 2024 </h1>
 Introduction:
 This repository contains the code to control the Tello Drone using voice and Google Gemini. Run this in in any Python editor in Windows with all dependencies installed.
 
@@ -18,8 +18,12 @@ Speak what you want, and the drone will obey your command.
 
 <h2>Program 3:</h2>
 File(s): samplestudentcode_image_recognition.py <br><br>
-This program is an example student code and which uses the Tello drone and atakes a picture of objects. The name oif the object is passed to the AI, which then recognises the object. The description of the object is displayed on the screen. 
+This program is an example student code and which uses the Tello drone and takes a picture of objects. The name oif the object is passed to the AI, which then recognises the object. The description of the object is displayed on the screen. 
 
 <h2>Notes:</h2>
 Feel free to use my code in your projects. Email me at (https://clarence.guru) if you have any questions or need help.
 Currently working on multiple / simultanous object Image Recognition using Gemini AI. Contact me if you would like a copy of the code.
+
+Update 29/11/2024: New version of codes available - runs using Jupyter in VSCode under Windows or Linux. Contains code to close ports for drones when not in use. All code integrated into 1 file with no need for seperate files. Updated GUI that will work even if the if the drone is not detected. Contact me for updated code. Also made a seperate module for number plate detection and object using Drones and AI. Outputs to a CSV.
+
+Working on: Automated language detection with AI and drones - ability to recognise any commands in any language. Web interface will be available soon - and will run from a web browser.
