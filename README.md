@@ -24,6 +24,9 @@ This program is an example student code and which uses the Tello drone and takes
 Feel free to use my code in your projects. Email me at (https://clarence.guru) if you have any questions or need help.
 Currently working on multiple / simultanous object Image Recognition using Gemini AI. Contact me if you would like a copy of the code.
 
+<br><br>
+
 Update 29/11/2024: New version of codes available - runs using Jupyter in VSCode under Windows or Linux. Contains code to close ports for drones when not in use. All code integrated into 1 file with no need for seperate files. Updated GUI that will work even if the if the drone is not detected. Contact me for updated code. Also made a seperate module for number plate detection and object using Drones and AI. Outputs to a CSV.
+<br><br>
 
 Working on: Automated language detection with AI and drones - ability to recognise any commands in any language. Web interface will be available soon - and will run from a web browser.
