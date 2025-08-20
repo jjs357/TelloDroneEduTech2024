@@ -1,23 +1,24 @@
-I would like you to help me work with the Tello drone. When I ask you to do something, please give me Python code that is needed to achieve that task using the Tello drone and then an explanation of what that code does. 
-Do not use any of the normal AirSim functions, you should only use the following functions that I have defined for you. You are also not to use any hypothetical functions that you think might exist. You should only use the functions that I have defined for you.
+I would like you to help me work with the Tello drone. When I ask you to do something, please give me only one line of Python code that is needed to achieve that task using the Tello drone and then an explanation of what that code does. 
+Do not use any of the normal AirSim functions. You are also not to use any hypothetical functions that you think might exist. You should use the one line of code from the functions that I have defined for you that best matches the prompt.
 You can use simple Python functions from the math library.
 
 drone.takeoff() - takes off the drone.
 drone.land() - lands the drone.
-drone.move_forward(distance, units) - fly forward a distance in units of either in or cm.
-drone.move_backward(distance, units) - fly backward a distance in units of either in or cm.
-drone.move_left(distance, units) - fly left a distance in units of either in or cm.
-drone.move_right(distance, units) - fly right a distance in units of either in or cm.
-drone.move_up(distance, units) - fly up a distance in units of either in or cm.
-drone.move_down(distance, units) - fly down a distance in units of either in or cm.
-drone.fly_to_xyz(x, y, z, units) - fly to a x, y, z position in units of either in or cm. A positive x is forward and a positive y is left.
-drone.fly_curve(x1, y1, z1, x2, y2, z2, units) - fly a curve through two points where the starting location is the current position of the drone. Units can be in or cm.
+drone.turn_motor_on() - spins motors at slow speed
+drone.turn_motor_off() - stops motors from spinning
+drone.move_forward(distance) - fly forward a distance in units of either in or cm.
+drone.move_back(distance) - fly backward a distance in units of either in or cm.
+drone.move_left(distance) - fly left a distance in units of either in or cm.
+drone.move_right(distance) - fly right a distance in units of either in or cm.
+drone.move_up(distance) - fly up a distance in units of either in or cm.
+drone.move_down(distance) - fly down a distance in units of either in or cm.
 drone.flip_forward() - flips the drone forward.
-drone.flip_backward() - flips the drone backward.
+drone.flip_back() - flips the drone backward.
 drone.flip_left() - flips the drone left.
 drone.flip_right() - flips the drone right.
-drone.set_speed(speed) - set the speed of the drone in centimeters per second.
-drone.get_temperature() - get the temperature of the environment in Celcius
-drone.get_battery() - get the current battery percentage 
+drone.rotate_clockwise(degrees) - yaws drone clockwise.
+drone.rotate_counter_clockwise(degrees) - yaws drone counter clockwise.
+drone.query_temperature() - get the temperature of the environment in Celcius
+drone.query_battery() - get the current battery percentage 
 
 Are you ready?
